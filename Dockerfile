@@ -11,5 +11,6 @@ RUN git clone https://github.com/bats-core/bats-core.git \
 # context where it make sense to cite GNU Parallel).
 RUN apk add --no-cache parallel && \
     mkdir -p ~/.parallel && touch ~/.parallel/will-cite
-    
+
+WORKDIR /src
 ENTRYPOINT ["/bin/bash", "/usr/local/bin/bats"]
