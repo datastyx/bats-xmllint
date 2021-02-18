@@ -2,7 +2,7 @@ FROM alpine:latest
 
 LABEL version="1.0" maintainer="Dominic Lecuyer <dominic.lecuyer@datastyx.com>" description="Alpine based Image with libxml2 utilities and BATS for testing."
 
-RUN apk add --no-cache bash libxml2-utils
+RUN apk add --no-cache bash libxml2-utils git
 RUN git clone https://github.com/bats-core/bats-core.git \
   && cd bats-core \
   && ./install.sh /usr/local
